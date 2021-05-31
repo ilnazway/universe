@@ -53,3 +53,15 @@ body {
   height: 100px;
   border: 1px solid black;
 }
+
+.lottery-wrapper {
+  display: flex;
+  padding: 15px 0;
+}
+
+.lottery__lottery-box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #FF4040;
+  margin: 0 10px;
+}
