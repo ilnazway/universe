@@ -1,0 +1,55 @@
+:root {
+  --fon: #e9967a;
+}
+
+body {
+  background-color: var(--fon);
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: #ffffff;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.initial-cover__link {
+  vertical-align: top;
+}
+
+.initial-cover__link--active {
+  color: red;
+}
+
+.initial-cover__box {
+  width: 150px;
+  height: 150px;
+  border: 2px solid green;
+}
+
+.box-cover--black {
+  background-color: black;
+}
+
+.box-cover--orange {
+  background-color: orange;
+}
+
+.title-red {
+  color: red;
+}
+
+.title-purpe {
+  color: #EB5284;
+}
+
+.yellow {
+  color: yellow !important;
+}
+
+.magic-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
