@@ -91,4 +91,30 @@ magicBox.addEventListener('click', function() {
 })
 
 
+// 
 
+var lotteryBox = document.querySelectorAll('.lottery__lottery-box')
+console.log(lotteryBox)
+
+var lotteryBox1 = document.querySelector('.lottery-box1')
+var lotteryBox2 = document.querySelector('.lottery-box2')
+var lotteryBox3 = document.querySelector('.lottery-box3')
+var lotteryBox4 = document.querySelector('.lottery-box4')
+var lotteryBox5 = document.querySelector('.lottery-box5')
+
+lotteryBox1.addEventListener('click', function() {
+  this.style.backgroundColor = 'transparent'
+})
+lotteryBox2.addEventListener('click', function() {
+  this.style.backgroundColor = 'transparent'
+})
+lotteryBox3.addEventListener('click', function() {
+  this.style.backgroundColor = 'transparent'
+})
+lotteryBox4.addEventListener('click', function() {
+  this.style.backgroundColor = 'transparent'
+  this.classList.add('lottery-box__prize')
+})
+lotteryBox5.addEventListener('click', function() {
+  this.style.backgroundColor = 'transparent'
+})
