@@ -1,4 +1,4 @@
-var a = document.querySelector('a')
+var a = document.querySelector('.initial-cover__link')
 var oldHref = a.getAttribute('href')
 
 a.setAttribute('href', 'https://shikimori.one/animes/z488-ichigo-mashimaro')
@@ -98,7 +98,7 @@ console.log(lotteryBox)
 
 for (i = 0; i < lotteryBox.length; i++) {
   lotteryBox[i].addEventListener('click', function() {
-    this.style.backgroundColor = 'transparent' 
+    this.style.backgroundColor = 'rgba(66,170,255, 0.2)' 
   })
 }
 
@@ -140,3 +140,33 @@ lotteryBox[12].addEventListener('click', function() {
 // lotteryBox5.addEventListener('click', function() {
 //   this.style.backgroundColor = 'transparent'
 // })
+
+
+var divs = document.querySelectorAll('.content-boxs div')
+console.log(divs)
+
+for (var i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', function(event) {
+    event.stopPropagation()
+    console.log(this.getAttribute('id'))
+  })
+}
+
+
+// 
+
+var linkOpen = document.querySelector('.characters > a')
+var listCharacters = document.querySelector('.list-characters')
+
+linkOpen.addEventListener('click', handleLinkClick)
+
+function handleLinkClick(event) {
+  event.preventDefault()
+
+  listCharacters.style.display = listCharacters.style.display === 'none'
+  ? 'block'
+  : 'none'
+
+}
+
+

@@ -54,6 +54,10 @@ body {
   border: 1px solid black;
 }
 
+.lottery-title {
+  margin: 0 15px;
+}
+
 .lottery-wrapper {
   display: flex;
   padding: 15px 0;
@@ -94,5 +98,22 @@ body {
   position: absolute;
 }
 
+.content-wrapper {
+  margin: 20px;
+}
 
+.box-1 {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EB5284;
+}
+
+.box-2 {
+  width: 150px;
+  height: 150px;
+  background-color: violet;
+}
 
