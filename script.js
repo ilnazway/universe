@@ -106,6 +106,14 @@ lotteryBox[3].addEventListener('click', function() {
   this.classList.add('lottery-box__prize')
 })
 
+lotteryBox[5].addEventListener('click', function() {
+  this.classList.add('lottery-box__prize')
+})
+
+lotteryBox[12].addEventListener('click', function() {
+  this.classList.add('lottery-box__prize')
+})
+
 // lotteryBox[0].addEventListener('click', function() {
 //   this.style.backgroundColor = 'transparent'
 // })
