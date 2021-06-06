@@ -13,7 +13,7 @@ var d = document
 var h1 = d.querySelector('h1')
 h1.textContent = 'Тперь главный заголовок будет таким!'
 
-document.querySelector('p').textContent = 'бла бал бал...'
+// document.querySelector('p').textContent = 'бла бал бал...'
 
 var link = a.attributes[1].nodeValue
 console.log(link)
@@ -168,5 +168,67 @@ function handleLinkClick(event) {
   : 'none'
 
 }
+
+// 
+
+var secretList = ['Наведи', 'Наведи сюда', 'Еще раз', 'Так вот', 'Ты', 'Шлапоблок']
+var secret = document.querySelector('.secret-message')
+
+for (var x = 0; x < secretList.length; x++) {
+  secret.addEventListener('mouseenter', function() {
+    console.log(secretList[0])
+  })
+}
+
+// secret.addEventListener('mouseenter', function() {
+//   this.textContent = 'Ты'
+// })
+
+// secret.addEventListener('mouseleave', function() {
+//   this.textContent = 'Шлапоблок'
+// })
+
+// secret.addEventListener('mouseenter', function() {
+//   this.textContent = 'Шлапоблок'
+// })
+
+// 
+
+
+var contentTexts = document.querySelectorAll('.content-texts p')
+console.log(contentTexts)
+
+for (y = 0; y < contentTexts.length; y++) {
+  contentTexts[y].addEventListener('click', function(event) {
+    event.target.style.color = 'blue'
+  })
+}
+
+var wrapper = document.getElementById('wrapper')
+
+wrapper.addEventListener('click', function(event) {
+  var tagName = event.target.tagName.toLowerCase()
+  console.log(tagName)
+
+  if (tagName === 'p') {
+    event.target.style.color = 'red'
+  }
+
+  if (event.target.classList.contains('color')) {
+    event.target.style.color = 'purple'
+  }
+
+  if (event.target.classList.contains('content-reset')) {
+    
+  }
+})
+
+// var reset = document.querySelector('.content-reset')
+
+// reset.addEventListener('click', function() {
+//   wrapper.style.color = 'black'
+// })
+
+
 
 
