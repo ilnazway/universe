@@ -45,14 +45,17 @@ promptBut.addEventListener('click', function() {
   }
 })
 
-var nameBut = document.querySelector('#name')
-var nameTitle = document.querySelector('.title-name')
- 
-nameBut.addEventListener('click', function() {
-  var myName = prompt('Введите свое имя')
+var messageBut = document.querySelector('#name')
+var messageTitle = document.querySelector('.title-name')
+var messageList = ['первый', 'второй', 'третий']
 
-  if (myName) {
-    nameTitle.textContent = myName
+
+messageBut.addEventListener('click', function() {
+  var myMessage = prompt('Введите свое имя')
+  messageList.splice(0, 0, myMessage)
+
+  if (myMessage) {
+    messageTitle.textContent = messageList[0]
     alert('Успешно!')
   } else {
     alert('Не получилось! Попробуйте снова!')
@@ -60,9 +63,27 @@ nameBut.addEventListener('click', function() {
 })
 
 
-console.warn('Предупреждения всякие')
-console.error('Ошибка')
-console.info('Информативное сообщение')
-console.log('Проверка')
+// console.warn('Предупреждения всякие')
+// console.error('Ошибка')
+// console.info('Информативное сообщение')
+// console.log('Проверка')
 
- new Error('Error. Ошибка. Паника')
+//  new Error('Error. Ошибка. Паника')
+
+
+var objArray = [
+  {name: 'Govrill', age: 68},
+  {name: 'Felichita', age: 32},
+  {name: 'Yulia', age: 18}
+]
+
+console.log(objArray)
+
+
+var foundPeople = objArray.find(function(people) {
+  return people.age === 18
+})
+
+console.log(foundPeople)
+
+
