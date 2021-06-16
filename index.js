@@ -1,21 +1,44 @@
 var $start = document.getElementById('start')
 var $game = document.getElementById('game')
+var $time = document.querySelector('#time')
 
 $start.addEventListener('click', startGame)
 $game.addEventListener('click', handleBoxClick)
 
 var score = 0
+var isGameStarted = false
 
 function startGame() {
   // console.log(getRandom(100, 30))
   // console.log('Zapusk')
+  isGameStarted = true
   $game.style.background = '#ffffff'
   $start.classList.add('hide')
+
+  var interval = setInterval(function() {
+    var time = parseFloat($time.textContent) // спарсивает указанное время
+
+    if (time <= 0 ) {
+      clearInterval(interval)
+      endGame()
+    } else {
+      $time.textContent = (time - 0.1).toFixed(1)
+    }
+
+  }, 100)
 
   renderBox()
 }
 
+function endGame() {
+  isGameStarted = false
+}
+
 function handleBoxClick(event) {
+  if (!isGameStarted) {
+    return
+  }
+
   if (event.target.dataset.box) {
     score++
     renderBox()
