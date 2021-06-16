@@ -1,6 +1,9 @@
 var $start = document.getElementById('start')
 var $game = document.getElementById('game')
 var $time = document.querySelector('#time')
+var $result = document.querySelector('#result')
+var $timeHeader = document.querySelector('#time-header')
+var $resultHeader = document.querySelector('#result-header')
 
 $start.addEventListener('click', startGame)
 $game.addEventListener('click', handleBoxClick)
@@ -9,8 +12,11 @@ var score = 0
 var isGameStarted = false
 
 function startGame() {
-  // console.log(getRandom(100, 30))
-  // console.log('Zapusk')
+  score = 0
+  setGameTime()
+  $timeHeader.classList.remove('hide')
+  $resultHeader.classList.add('hide')
+
   isGameStarted = true
   $game.style.background = '#ffffff'
   $start.classList.add('hide')
@@ -30,8 +36,23 @@ function startGame() {
   renderBox()
 }
 
+function scoreResult() {
+  $result.textContent = score.toString()
+}
+
+function setGameTime() {
+  var time = 3
+  $time.textContent = time.toFixed(1)
+}
+
 function endGame() {
   isGameStarted = false
+  scoreResult()
+  $start.classList.remove('hide')
+  $game.innerHTML = ''
+  $game.style.backgroundColor = '#ccc'
+  $timeHeader.classList.add('hide')
+  $resultHeader.classList.remove('hide')
 }
 
 function handleBoxClick(event) {
