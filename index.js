@@ -20,6 +20,7 @@ function hide($el) {
 
 var score = 0
 var isGameStarted = false
+var colors = ['#FFD200', '#34e89e', '#A7BFE8', '#B06AB3', '#43C6AC', '#FFAFBD', '#ffc3a0', '#f85032']
 
 function startGame() {
   score = 0
@@ -91,7 +92,11 @@ function renderBox() {
   box.style.position = 'absolute'
   box.style.top = getRandom(0, maxTop) + 'px' // случайное расположение по высоте
   box.style.left = getRandom(0, maxLeft) + 'px' // случайное расположение по левому краю
-  box.style.backgroundColor = 'red'
+
+  // var rndCol = 'rgb(' + getRandomColor() + ',' + getRandomColor() + ',' + getRandomColor() + ')'
+
+  var randomColorIndex = getRandom(0, colors.length)
+  box.style.backgroundColor = colors[randomColorIndex]
   box.style.cursor = 'pointer'
   box.setAttribute('data-box', 'true')
 
@@ -99,6 +104,10 @@ function renderBox() {
 
 
 }
+
+// function getRandomColor() {
+//   return Math.floor(Math.random() * 255)
+// }
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min)

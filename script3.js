@@ -1,4 +1,9 @@
 var square = document.querySelectorAll('.square')
+var button = document.querySelector('.btn')
+
+button.addEventListener('click', function() {
+  console.log('random(255)')
+})
 
 for (var x = 0; x < square.length; x++) {
   if (x % 2) {
