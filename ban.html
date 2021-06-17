@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Танцующие баннеры</title>
+  <style>
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .banner {
+      width: 300px;
+      height: 150px;
+      background-color: black;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body onload="flickeringColor();">
+  <div class="wrapper">
+    <div class="one-banner banner" id="my-box">Баннер 1
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nobis vitae maxime sit velit et, iure earum eius sunt! Placeat voluptates voluptate beatae sed voluptatem est temporibus accusamus, neque iure.</p>
+    </div>
+    <div class="two-banner banner">Баннер 2
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nobis vitae maxime sit velit et, iure earum eius sunt! Placeat voluptates voluptate beatae sed voluptatem est temporibus accusamus, neque iure.</p>
+    </div>
+    <div class="three-banner banner">Баннер 3
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nobis vitae maxime sit velit et, iure earum eius sunt! Placeat voluptates voluptate beatae sed voluptatem est temporibus accusamus, neque iure.</p>
+    </div>
+    <button id="stop" onclick="stopFlickeringColor();">Stop</button>
+  </div>
+  <script src="banscript.js">
+  </script>
+</body>
+</html>
