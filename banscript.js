@@ -12,11 +12,18 @@ function flickeringColor() {
 function flashBanner() {
   var banners = document.querySelectorAll('.banner')
   for (var x = 0; x < banners.length; x++) {
-    if (banners[x].style.backgroundColor == 'red') {
+    if (banners[x].style.backgroundColor == 'black') {
       banners[x].style.backgroundColor = 'yellow'
+      banners[x].style.color = 'black'
     } else {
-      banners[x].style.backgroundColor = 'red'
+      banners[x].style.backgroundColor = 'black'
+      banners[x].style.color = 'white'
     }
+
+
+    // banners[x].style.backgroundColor = banners[x].style.backgroundColor == 'blue' 
+    // ? 'pink'
+    // : 'blue'
   }
 
   // if (div.style.backgroundColor === 'red') {
