@@ -2,6 +2,7 @@ var printObject = function(objName, additionalName) {
   console.log('Printing object:', objName)
   console.log('Additional argument:', additionalName)
   for (var key in this) {
+    debugger
     if (this.hasOwnProperty(key)) {
       console.log('[' + key + ']: ' + this[key])
     }
